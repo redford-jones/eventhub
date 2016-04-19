@@ -1,0 +1,37 @@
+ul#user-options.dropdown-content
+    li
+        a.capgem-text(href='/user') My Account
+    li
+        a.capgem-text(href='/user/events') My Events
+    li.divider
+    li
+        a.capgem-text(href='/signout') Sign Out
+div.navbar-fixed
+    nav.capgem(role='navigation')
+        div.nav-wrapper.container
+            a#logo-container.brand-logo(href='/')
+                img(src='/images/eh-logo.png')
+            ul.right.hide-on-med-and-down
+                li
+                    a.white-text(href='/event/create',title='Create an event')
+                        i.material-icons add_circle
+                li
+                    a.white-text(href='/event/geo', title='Events near me')
+                        i.material-icons near_me
+                li
+                    a.white-text(href='/event', title='Search for an event')
+                        i.material-icons search
+                li
+                    a.dropdown-button.white-text(href='#', data-activates='user-options',title='Account options')
+                        i.material-icons person
+            ul#nav-mobile.side-nav
+                li
+                    a(href='/event/create') New Event
+                li
+                    a(href='/event/geo') Near Me
+                li
+                    a(href='/event') All Events
+                li
+                    a(href='/user') My Account
+            a.button-collapse.white-text(href='#', data-activates='nav-mobile')
+                i.material-icons menu

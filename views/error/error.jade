@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  .container
+    h1.capgem-text #{error.status}
+      |: #{message}
+    p This error has been reported to support teams who will investigate further.
+    blockquote.bq-warn
+      p If you need to contact the support team for more information, please quote error number:
+      p.capgem-text.accent-1 #{messageID}

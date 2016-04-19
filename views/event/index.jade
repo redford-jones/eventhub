@@ -1,0 +1,23 @@
+extends ../layout
+block content
+    .container
+        h1.capgem-text.accent-1 #{layout.title}
+        #notification-area
+            blockquote.bq-info
+                i.infoText.material-icons.left info_outline
+                | #{layout.descriptionH1}
+                p #{layout.descriptionDoc}
+    ul.collection
+        each event, i in eventList
+            each value in event
+                li.collection-item.avatar
+                    i.material-icons.circle.capgem today
+                    span.title #{title}
+                    p
+                    | #{startDate}
+                    |  #{endDate}
+                    br
+                    | #{location}
+                    //p.secondary-content
+                    //    a(href='/event/view'+events.id)
+                    //      i.material-icons info_outline

@@ -1,0 +1,61 @@
+extends layout
+
+block content
+  #index-banner.parallax-container
+    .section.no-pad-bot
+      .container
+        h1.header.center.capgem-text Welcome to #{title}
+        .row.center
+          h5.header.col.s12.light #{description}
+        .row.center
+          a#download-button.btn-large.waves-effect.waves-light.capgem.accent-1(href='/event/create') #{getStarted}
+    .parallax
+      img(src='/images/background1.jpg')
+  .container
+    .section
+      // Icon Section
+      .row
+        .col.s12.m4
+          .icon-block
+            h2.center.capgem-text
+              i.material-icons flash_on
+            h5.center Quickly create and share your event
+            p.light
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+        .col.s12.m4
+          .icon-block
+            h2.center.capgem-text
+              i.material-icons near_me
+            h5.center Find events in your location
+            p.light
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+        .col.s12.m4
+          .icon-block
+            h2.center.capgem-text
+              i.material-icons translate
+            h5.center Speaks in any language
+            p.light
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+  .parallax-container.valign-wrapper
+    .section.no-pad-bot
+      .container
+        .row.center
+          h5.header.col.s12.light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat.
+    .parallax
+      img(src='/images/background5.jpg', alt='Unsplashed background img 2')
+  .container
+    .section
+      .row
+        .col.s12.center
+          h3
+            i.mdi-content-send.capgem-text
+          h4 Got feedback?
+          p.left-align.light
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae
+  .parallax-container.valign-wrapper
+    .section.no-pad-bot
+      .container
+        .row.center
+          h5.header.col.s12.light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat.
+    .parallax
+      img(src='/images/background2.jpg', alt='Unsplashed background img 3')

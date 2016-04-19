@@ -1,0 +1,86 @@
+extends ../layout
+block content
+  .container
+    h1.capgem-text.accent-1 #{layout.title}
+    div#notification-area
+        blockquote.bq-info
+          i.infoText.material-icons.left info_outline
+          | #{layout.descriptionH1}
+          p #{layout.descriptionDoc}
+    .row
+      form.col.s12(method='post')
+        .row
+            .input-field.col.s12
+                input#eventName.validate(type='text' required='', name='eventName', length="255")
+                label(for='eventName') Event title
+        .row
+          .input-field.col.s6
+            label(for='startDate') Start date
+            input#startDate.datepicker(type='date', name='startDate')
+          .input-field.col.s6
+            input#startTime.timepicker(type='time', name='startTime')
+            label(for='startTime') Start time
+        .row
+          .input-field.col.s6
+            input#endDate.datepicker(type='date', name='endDate')
+            label(for='endDate') End date
+          .input-field.col.s6
+              input#endTime.timepicker(type='time', name='endTime')
+              label(for='endTime') End time
+        .row
+          .input-field.col.s12
+            textarea#eventDescription.materialize-textarea(name='eventDescription')
+            label(for='eventDescription') Description of event
+        .row
+            blockquote.bq-warn
+                i.material-icons.left warning
+                | All location fields are required.
+        .row
+          .input-field.col.s6
+            input#eventBuilding.validate(type='text', name='eventBuilding')
+            label(for='eventBuilding') Building
+          .input-field.col.s6
+            input#eventRoom.validate(type='text', name='eventRoom')
+            label(for='eventRoom') Room
+        .row.hide
+            //hidden location fields (used in geo-location)
+            input#eventLat(type='text', name='eventLat')
+            input#eventLng(type='text', name='eventLng')
+            input#eventGeoloc(type='text', name='eventGeoloc')
+        .row
+          .input-field.col.s6
+              input#eventLocation.validate(type='text', name='eventLocation', required='', data-error='You must include a postal address for this event')
+              label(for='eventLocation') Postal Code
+              button#gmapsFindLocation.btn.waves-effect.waves-light(type='button')
+                | Find this location
+                i.material-icons.left search
+              blockquote#eventFrmtInf.bq-info(style='display:none')
+                i.infoText.material-icons.left info_outline
+                | The following information will be included with this event:
+                p#eventLocality
+          .col.s6
+              #map.create-map
+        .row
+          .input-field.col.s12
+            input#eventTags(type='text',name='eventTags')
+            label(for='eventTags') Categories/Tags
+        .row
+          .input-field.col.s12
+            input#organiserEmail.validate(type='email', name='organiserEmail')
+            label(for='organiserEmail') Your email (or email of event host)
+        .row
+          .input-field.col.s4
+            input#eventAttendees(type='number', name='eventAttendees')
+            label(for='eventAttendees') Maximum attendees
+          .input-field.col.s4
+            input#eventRestricted(type='checkbox', name='eventRestricted')
+            label(for='eventRestricted') Hide from search engine?
+        .row
+          .col.s6
+            button#btnCancel.btn.waves-effect.waves-light.red(type='cancel')
+                | Cancel
+                i.material-icons.right close
+          .col.s6.right-align
+            button#btnCreate.btn.waves-effect.waves-light(type='submit')
+                | Create event
+                i.material-icons.right check

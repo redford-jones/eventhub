@@ -1,0 +1,65 @@
+extends ../layout
+block content
+    -var space = ' '
+    .container
+        .col.s8
+            h1 Event created:
+            h3 #{eventDetails.title}
+            h6 Starts: #{eventDetails.startDate}. #{eventDetails.startTime}
+            h6 Ends: #{eventDetails.endDate}. #{eventDetails.endTime}
+            p
+                strong Location:
+                #{space}
+                | #{eventDetails.location.room}, #{eventDetails.location.building}, #{eventDetails.location.locality}. #{eventDetails.location.postalCode}.
+                br
+                a(href='http://maps.google.com/maps?z=12&t=m&q=loc:'+eventDetails.location.lat+'+'+eventDetails.location.lng target='_new') View location in Google Maps
+            .capgem-text#moreEventInfo(style='margin-top:40px;margin-bottom:40px')
+                i.infoText.material-icons.left info_outline
+                | More information about your event
+                p.black-text(style='display:none')
+                    //if !{eventDetails.restricted}
+                    //    span.deep-orange-text
+                    //        i.material-icons.left lock_open
+                    //        | This event will be hidden from search engines
+                    //    br
+                    //else
+                    //    span.deep-orange-text
+                    //        i.material-icons.left lock_outline
+                    //        | This event is visible to all authenticated users
+                    //    br
+                    span #{eventDetails.description}
+                    br
+                    br
+                    span
+                        strong Your unique event ID:
+                    #{space}
+                    | #{eventID}
+                    br
+                    span
+                        strong Maximum attendees:
+                    #{space}
+                    | #{eventDetails.maxAttendees}
+            blockquote.bq-info(style='padding-bottom:20px')
+                i.infoText.material-icons.left share
+                | Share your event:
+                ul.tabs(style='margin-top:40px; margin-bottom:20px')
+                    li.tab.col.s1.capgem-text
+                        a.active.capgem-text(href='#copyLink')
+                            i.material-icons.capgem-text(title='Copy link') link
+                    li.tab.col.s1.capgem-text
+                        a.capgem-text(href='#emailLink')
+                            i.material-icons.capgem-text(title='Mail a link to this event') mail_outline
+                    li.tab.col.s1.capgem-text
+                        a(href='#tweetLink')
+                            i.material-icons add
+                    li.tab.col.s1.capgem-text
+                        a(href='#yamLink')
+                            i.material-icons add
+                #copyLink.col.s6.capgem-text.accent-1
+                    pre https://eventhub.capgemini.com/event/view/#{eventID}
+                #emailLink.col.s6.capgem-text.accent-1
+                    | Test 2
+                #tweetLink.col.s6.capgem-text.accent-1
+                    | Test 3
+                #yamLink.col.s6.capgem-text.accent-1
+                    | Test 4

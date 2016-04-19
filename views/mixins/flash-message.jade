@@ -1,0 +1,7 @@
+mixin flash-messages(flash)
+    - if(flash.warning)
+        .alert-message.warning
+        p=flash.warning
+    - if(flash.info)
+        .alert-message.success
+        p=flash.info

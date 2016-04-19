@@ -1,0 +1,52 @@
+ul#user-options.dropdown-content
+    li
+        a.capgem-text(href='/account') My account
+    li
+        a.capgem-text(href='/account/events') My events
+    li.divider
+    li
+        a.capgem-text(href='/signout') Sign out
+div.navbar-fixed
+    nav.capgem(role='navigation')
+        div.nav-wrapper.container
+            a#logo-container.brand-logo(href='/')
+                img.hide-on-med-and-down(src='/images/eh-logo.png')
+                img.hide-on-large-only(src='/images/eh-logo-mob.png')
+            ul.right.hide-on-med-and-down
+                li
+                    a.white-text(href='/event/create',title='Create an event')
+                        i.material-icons add_circle
+                li
+                    a.white-text(href='/event/view/all', title='All events')
+                        i.material-icons today
+                li
+                    a.white-text(href='/event/view/near_me', title='Events near me')
+                        i.material-icons near_me
+                li
+                    a.dropdown-button.white-text(href='#', data-activates='user-options',title='My account')
+                        i.material-icons person
+                //li
+                //    form
+                //        .input-field
+                //            input#search(type='search')
+                //            label#searchActivate.white-text(for='search')
+                //                i.material-icons search
+                //            i#searchClose.material-icons close
+            ul#nav-mobile.side-nav
+                li
+                    form
+                        .input-field
+                            input#searchMob(type='search')
+                            label.capgem-text.accent-1(for='searchMob')
+                                i.material-icons search
+                            i.material-icons close
+                li
+                    a.capgem-text.accent-1(href='/event/create') New Event
+                li
+                    a.capgem-text.accent-1(href='/event/view/near_me') Near Me
+                li
+                    a.capgem-text.accent-1(href='/event/view/all') All Events
+                li
+                    a.capgem-text.accent-1(href='/account') My Account
+            a.button-collapse.white-text(href='#', data-activates='nav-mobile')
+                i.material-icons menu
